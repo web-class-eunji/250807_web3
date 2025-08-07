@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리형</title>
+</head>
+<body>
+    <script>
+        let a = true;
+        let b = 10 >= 100;
+        let c = Boolean(0);
+        // 0, null, undefined, 빈 문자("") 를 제외한 모든 데이터에 대해 true를 반환
+        //undefined :변수에 값이 등록되기 전이라 비어있음!!
+        //null : 변수에 저장된 데이터를 비우고자 할 때 사용!!
+        document.write(a,"<br>");
+        document.write(b,"<br>");
+        document.write(c,"<br>");
+
+        let d;
+        let e = 5;
+        e = null;
+
+        console.log(d);
+        console.log(e);
+
+    </script>
+</body>
+</html>
