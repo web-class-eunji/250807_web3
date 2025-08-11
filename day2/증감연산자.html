@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감연산자</title>
+</head>
+<body>
+    
+    <script>
+        // 증감연산자 이론
+        // 변수--; 또는 ++변수;
+
+        // ++변수와 변수--의 차이
+        // let a = ++b; : 먼저 ++b가 실행되어 b의 값이 증가연산이 먼저 실행되고, 증가된 b의 값을 a에 대입하게 된다.
+        // let a = b++; : a에다 b의 값을 대입한 후 b를 증가시킴
+
+        let num1 = 10;
+        let num2 = 20;
+        let result;
+
+        num1--;
+        console.log(num1);
+
+        num1++;
+        console.log(num1);
+
+        result = ++num1;
+        console.log(result);
+
+        result = --num1;
+        console.log(num1);
+
+        result = num1--;
+        console.log(result);
+        console.log(num1);
+
+
+
+    </script>
+</body>
+</html>
