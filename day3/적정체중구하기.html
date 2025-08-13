@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적정체중구하기</title>
+</head>
+<body>
+    <script>
+        let name = prompt("당신의 이름을 입력해주세요");
+        let height = prompt("당신의 키는 몇cm입니까? ","숫자만 입력해주세요");
+        let userWeight = prompt("당신의 몸무게는 몇kg입니까?","숫자만 작성해주세요");
+
+        let weight = (height-100)*0.9;
+        // 적정 체중 범위 : +-5
+        let nomalWeight = userWeight >= weight - 5 && userWeight <= weight + 5;
+
+        nomalWeight = nomalWeight? "적정체중이네요~" : "적정체중이 아닙니다";
+
+        document.write(name + "님은" + nomalWeight);
+
+    </script>
+</body>
+</html>
