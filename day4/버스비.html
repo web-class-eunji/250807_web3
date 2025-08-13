@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버스비</title>
+</head>
+<body>
+    <script>
+        /*
+        1. 0 ~ 7세 유아 버스비는 800원
+        2. 8 ~ 19세 학생 버스비는 1,200원
+        3. 20 ~ 34세 청년 버스비는 1,600원
+        4. 35 ~ 59세 중년 버스비는 2,000원
+        5. 60 ~ 150세 노인 버스비는 무료
+        6. 아무런 조건에 들지 않았다면 사람의 나이가 어떻게 (입력받은 값) 살??!
+        */
+
+        let age = pompt("나이를 입력해주세요");
+        if(age >= 0 && age <= 7){
+            document.write("0 ~ 7 세 버스비는 800원");
+        }else if(age >= 8 && age <= 19){
+            document.write("8 ~ 19세 학생 버스비는 1,200원");
+        }else if(age >= 20 && age <= 34){
+            document.write("0 ~ 34세 청년 버스비는 1,600원");
+        }else if(age >= 35 && age <= 59){
+            document.write("35 ~ 59세 중년 버스비는 2,000원");
+        }else if(age >= 60 && age <= 150){
+            document.write("60 ~ 150세 노인 버스비는 무료");
+        }else {
+            document.write("사람의 나이가 어떻게" + age + "살?~!!!");
+        }
+    </script>
+</body>
+</html>

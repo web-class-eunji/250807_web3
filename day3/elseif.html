@@ -7,14 +7,14 @@
 </head>
 <body>
     <script>
-        let number = 0;
-        if(number > 0){
-            document.write("양수입니다.");
-        }else if(number == 0){
-            document.write("0입니다.");
-        }else{
-            document.write("음수입니다.");
-        }
+        // let number = 0;
+        // if(number > 0){
+        //     document.write("양수입니다.");
+        // }else if(number == 0){
+        //     document.write("0입니다.");
+        // }else{
+        //     document.write("음수입니다.");
+        // }
 
         /*
         점수를 받아서 90점 이상이라면 A학점
@@ -24,6 +24,19 @@
         이하라면 F학점으로 재시험
         
         */
+
+        let score = prompt("점수를 입력해주세요");
+        if(score >= 90){
+            document.write("A학점 참 잘했어요~!");
+        }else if(score >= 80){
+            document.write("B학점");
+        }else if(score >= 70){
+            document.write("C학점");
+        }else if(score >= 60){
+            document.write("D학점");
+        }else {
+            document.write("F학점으로 재시험 당첨~!");
+        }
     </script>
 </body>
 </html>
