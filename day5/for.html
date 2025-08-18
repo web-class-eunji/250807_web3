@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+</head>
+<body>
+    <script>
+        /*
+        for(초기값;조건식;증감식){
+            자바스크립트 코드;
+        }
+        */
+
+        for(let i = 1;i <= 10; i++){
+            document.write("반복" + i + "<br>");
+        }
+
+        // 10부터 1까지 감소하는 것 콘솔에 찍기!
+        for(let i = 10;i >= 1; i--){
+            console.log(i)
+        }
+
+        // 제곱출력기 ( 1 ~ 10 제곱까지 만들어보기!)
+        // 2 * 2 = 4
+        // 3 * 3 = 9
+        // 4 * 4 = 16
+        for(let i = 1; i <= 10; i++){
+            document.write(`${i}의 제곱 : ${i * i}<br>`);
+        }
+    </script>
+</body>
+</html>

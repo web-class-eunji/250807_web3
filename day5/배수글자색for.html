@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배수글자색</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .aqua{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 5의 배수라면 빨간색
+        // 7의 배수라면 파란색
+        // 둘 다 겹치는 배수라면 아쿠아색
+        // 1~100까지!!
+
+        for(let i = 1; i <= 100; i++){
+            if(i % 5 == 0 && i % 7 != 0){
+                document.write("<p class='red'>" + i + "</p>");
+            }else if(i % 7 == 0 && i % 5 != 0){
+                document.write("<p class='blue'>" + i + "</p>");
+            }else if(i % 7 == 0 && i % 5 == 0){
+                document.write("<p class='aqua'>" + i + "</p>");
+            }
+        }
+    </script>
+</body>
+</html>
