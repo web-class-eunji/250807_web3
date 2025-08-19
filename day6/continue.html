@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue</title>
+</head>
+<body>
+    <script>
+        /*
+        for(let i = 0; 조건식; 증감식){
+            자바스크립트 코드
+            컨티뉴
+            자바스크립트코드 (컨티뉴 조건에 부합하다면 출력X)
+        }
+
+        while(조건식){
+            증감식
+            컨티뉴
+            자바스크립트코드
+        }
+        */
+
+        for(let i = 1; i <= 10; i++){
+            if(i % 2 == 0){
+                continue;
+            }
+            document.write(i,"<br>");
+        }
+
+        let i = 0;
+        while(i <= 10){
+            i++;
+            if(i % 2 !== 0){
+                continue;
+            }
+            document.write(i,"<br>");
+        }
+    </script>
+</body>
+</html>
