@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체</title>
+</head>
+<body>
+    <script>
+        let tv = new Object; //tv라는 빈 객체를 생성
+        tv.color = "white"; // color속성 지정
+        tv.price = 300000; //price속성 지정
+
+        tv.show = function(){ // show의 속성은 행동메서드인것!
+            document.write(`tv 색상 : ${this.color} <br>`);
+            // this : 함수를 호출한 주체를 뜻한다. 
+            document.write(`tv 가격 : ${this.price} <br>`);
+        }
+
+        tv.show();
+        // tv객체의 행동을 제어하기 위해 만든 기능이 메소드!
+
+        
+    </script>
+</body>
+</html>

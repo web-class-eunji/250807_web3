@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜정보객체</title>
+</head>
+<body>
+    <script>
+        // 참조변수 = new Date();
+        // let todayDate = new Date();
+        // let stringDate = new Date("2002-5-31"); //안전함
+        // let mathDate = new Date("2002,4,31"); 
+
+        // 날짜 정보를 가져올 때
+        // 1. getFullYear() - 연도정보
+        // 2. getMonth() - 월정보 (현재월 + 1)
+        // 3. getDate() - 날짜정보
+        // 4. getDay() - 요일정보(일요일 : 0 / 토요일 : 6)
+        // 5. getHours() - 시 정보
+        // 6. getMinutes() - 분
+        // 7. getSeconds() - 초
+        // 8. getTime() - 밀리초 단위로 반환함
+
+        let today = new Date();
+        let nowMonth = today.getMonth() + 1,
+            nowDate = today.getDate(),
+            nowDay = today.getDay();
+
+        document.write("<h2>오늘 날짜 정보</h2>");
+        document.write(`현재 월 : ${nowMonth} <br>`);
+        document.write(`현재 일 : ${nowDate} <br>`);
+        document.write(`현재 요일 : ${nowDay} <br>`);
+
+        let worldcup = new Date("2002-05-31");
+        //2002 월드컵 몇 월 / 몇일 / 무슨요일인지 뽑아보세요
+        let worldcupMonth = worldcup.getMonth() + 1,
+            worldcupDate = worldcup.getDate(),
+            worldcupDay = worldcup.getDay();
+
+        document.write("<h2>월드컵 날짜 정보</h2>");
+        document.write(`2002 월드컵 월 : ${worldcupMonth} <br>`);
+        document.write(`2002 월드컵 일 : ${worldcupDate} <br>`);
+        document.write(`2002 월드컵 요일 : ${worldcupDay} <br>`);
+
+
+    </script>
+</body>
+</html>
