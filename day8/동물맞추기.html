@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동물맞추기</title>
+    
+</head>
+<body>
+    <script>
+        document.write("<h1>컴퓨터가 생각하는 동물 맞추기!</h2>");
+
+        let animal = prompt("고양이, 강아지, 햄스터 중 선택하세요");
+        let animalNum;
+
+        switch(animal){
+            case "고양이": animalNum = 1;
+            break;
+
+            case "강아지": animalNum = 2;
+            break;
+
+            case "햄스터": animalNum = 3;
+            break;
+
+            default:
+                alert("잘못된 값 작성");
+                location.reload();
+        }
+
+        let randomNum = Math.ceil(Math.random()*3);
+        if(randomNum == animalNum){
+            document.write("<p>축하합니다🎉 컴퓨터가 생각하는 동물을 맞추셨어요!</p>");
+            document.write(`<img src='./animal_img_${randomNum}.jpg'`);
+        }else {
+            document.write("<p>아쉽네요😥 컴퓨터가 생각하는 동물은 바로!</p>");
+            document.write(`<img src='./animal_img_${randomNum}.jpg'`);
+        }
+        /*
+        
+        swich문을 통해 유저가 작성한 동물과 케이스가 일치한다면
+
+        고양이 : 1번
+        강아지 : 2번
+        햄스터 : 3번
+        
+        랜덤값을 생성 1 ~ 3
+        
+        사용자가 입력한 동물과 컴퓨터가 생각한 랜덤값과 같다면 
+        축하합니다! 컴퓨터가 생각하는 동물을 맞췄습니다~! 출력
+
+        다르다면
+        아쉽네요ㅜ 컴퓨터가 생각한 동물은 바로!! 
+
+        */
+
+    </script>
+</body>
+</html>

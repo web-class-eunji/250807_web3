@@ -7,7 +7,16 @@
 </head>
 <body>
     <script>
-        
+        let childrensDay = new Date("2025-05-05");
+        let parentsDay = new Date("2025-05-08");
+        // 알아서 밀리초단위로 저장됨 
+
+        let minusDay = parentsDay - childrensDay;
+        console.log(minusDay);
+
+        let result = minusDay / (1000 * 60 * 60 * 24);
+        console.log(`어린이날과 어버이날은 ${result}일 차이가 납니다.`);
+
     </script>
 </body>
 </html>

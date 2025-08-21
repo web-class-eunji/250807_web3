@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수학객체</title>
+</head>
+<body>
+    <script>
+        /*
+        Math.max(숫자1,숫자2,숫자3,숫자4) : 숫자 중 가장 큰 값을 반환(최대값)
+        Math.min(숫자1,숫자2,숫자3,숫자4) : 숫자 중 가장 작은 값을 반환(최소값)
+        Math.abs(숫자) : 숫자의 절대값을 반환 (부호 제거)
+        Math.round(숫자) : 소수점 첫째자리 반올림하여 정수 반환
+        Math.ceil(숫자) : 소수점 첫째자리에서 무조건 올림하여 정수 반환
+        Math.floor(숫자) : 소수점 첫째자리에서 무조건 내림하여 정수 반환 
+        Math.sqrt(숫자) : 숫자의 제곱근값을 반환
+        Math.random() : 0~1 사이의 난수를 반환
+        Math.pow(숫자,제곱값) : 거듭제곱 반환
+        Math.PI : 원주율
+        */
+
+        let num = 2.1234;
+        
+        let maxNum = Math.max(10,5,8,30),
+            minNum = Math.min(10,5,8,30),
+            absNum = Math.abs(-10000),
+            roundNum = Math.round(num),
+            ceilNum = Math.ceil(num),
+            floorNum = Math.floor(num),
+            sqrtNum = Math.sqrt(9),
+            randomNum = Math.random(),
+            powNum = Math.pow(2,8),
+            pi = Math.PI;
+
+            document.write(`max : ${maxNum}<br>`);
+            document.write(`min : ${minNum}<br>`);
+            document.write(`abs : ${absNum}<br>`);
+            document.write(`round : ${roundNum}<br>`);
+            document.write(`ceil : ${ceilNum}<br>`);
+            document.write(`floor : ${floorNum}<br>`);
+            document.write(`sqrt : ${sqrtNum}<br>`);
+            document.write(`random : ${randomNum}<br>`);
+            document.write(`pow : ${powNum}<br>`);
+            document.write(`pi : ${pi}<br>`);
+
+    </script>
+</body>
+</html>
