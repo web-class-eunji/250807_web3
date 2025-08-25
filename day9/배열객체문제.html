@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열객체문제</title>
+</head>
+<body>
+    <script>
+        // 
+        let group1 = ["사과","바나나"];
+        let group2 = ["포도","딸기"];
+
+        
+        // 1. 그룹 1과 2를 합치기
+        // 2. 바나나랑 포도만 출력하기
+        // 3. 사과 바나나 귤 복숭아 딸기 라고 출력되도록 변경하기
+        //      ㄴ splice
+        // 4. 사과를 삭제하고 망고를 추가
+        // 5. 오름차순으로 정리
+
+        let allFruits = group1.concat(group2);
+        document.write(allFruits + "<br>");
+        // 사과바나나포도딸기
+
+
+        let sliceFruits = allFruits.slice(1,3);
+        document.write(sliceFruits + "<br>");
+
+        allFruits.splice(2,1,"귤","복숭아");
+        document.write(allFruits + "<br>");
+
+        allFruits.shift();
+        allFruits.unshift("망고");
+        document.write(allFruits + "<br>");
+
+        allFruits.sort();
+        document.write(allFruits + "<br>");
+
+
+
+
+
+
+    </script>
+</body>
+</html>

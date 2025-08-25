@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>시간제어</title>
+</head>
+<body>
+    <button onclick="clearInterval(auto)">증가정지</button>
+    <script>
+        let addNum = 0;
+        let auto = setInterval(() => {
+            addNum++;
+            console.log("addNum : ", addNum);
+        }, 100);
+
+    </script>
+</body>
+</html>
