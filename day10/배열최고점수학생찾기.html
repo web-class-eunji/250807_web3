@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열최고점수학생찾기</title>
+</head>
+<body>
+    <script>
+        let student = [
+            {name:"엘사", score:85},
+            {name:"모아나", score:92},
+            {name:"에리얼", score:78},
+            {name:"라푼젤", score:36},
+        ];
+
+
+        document.write("<br>");
+        document.write("모든 학생 평균 <br>");
+        // console.log(student[0].name);
+        let totalScore = 0;
+        for(let i = 0; i < student.length; i++){
+            totalScore += student[i].score;
+        }
+        console.log(totalScore);
+
+        let avgScore = totalScore/student.length;
+        console.log(avgScore);
+
+        let roundScore = Math.round(avgScore);
+        console.log(roundScore);
+        document.write(`평균 : ${roundScore}<br>`);
+
+
+        document.write("<br>");
+        document.write("최고점수 학생 <br>");
+        let highScore = 0;
+        let topStudent;
+        for(let i = 0; i < student.length; i++){
+            if(student[i].score > highScore){
+                highScore = student[i].score;
+                topStudent = student[i];
+            }
+        }
+        console.log(topStudent);
+        console.log(highScore);
+        document.write(`최고점수학생 : ${topStudent.name}<br>`);
+
+
+        let passedStudent = [];
+        // for 
+        // 빈 배열의 마지막 인덱스에 새 데이터를 삽입하는 배열객체 메서드 사용해야함
+
+        for(let i = 0; i < student.length; i++){
+            if(student[i].score >= roundScore){
+                passedStudent.push(student[i]);
+            }
+        }
+
+        console.log(passedStudent);
+        document.write("<br>");
+        document.write("평균이상 학생 <br>");
+        for(let i = 0; i < passedStudent.length; i++){
+            document.write(`${passedStudent[i].name} : ${passedStudent[i].score}<br>`);
+        }
+    </script>
+</body>
+</html>

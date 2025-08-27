@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열객체</title>
+</head>
+<body>
+    <script>
+        // let 변수 = new String("문자형데이터");
+        // let text = "Hello World";
+
+        /*
+        1. charAt(index) : 문자열에서 인덱스 번호에 해당하는 문자를 반환
+        2. indexOf("찾을 문자") : 문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아 가장 먼저 일치하는 문자의 인덱스 번호를 반환한다.
+        3. lastIndexOf("찾을 문자") : 문자열에서 오른쪽에서부터 ( 오른쪽에서 찾되, 문자의 시작 인덱스를 반환한다.)
+        4. match("찾을 문자") : 문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저 찾은 문자를 반환한다.
+        5. replace("바꿀문자","새문자") : 문자열에서 왼쪽부터 바꿀 문자와 일치하는 문자를 찾아 제일 먼저 찾은 문자를 새 문자로 치환한다.
+        6. search("찾을 문자") : 문자열에서 왼쪽부터 바꿀 문자와 일치하는 문자를 찾아 제일 먼저 일치하는 인덱스 번호를 반환한다.
+        7. slice(a,b) : 출력하고싶은 시작 인덱스, 끝내고 싶은 인덱스 +1
+        8. substring(a,b) : a인덱스부터b인덱스 이전 구간의 문자를 반환한다.
+        9. substr(a,문자 개수) : 문자열에 a인덱스부터 지정한 문자 개수만큼 문자열을 반환한다.
+        10. split("문자") : 지정한 문자를 기준으로 문자 데이터를 나누어 배열에 저장하여 반환한다.
+        11. toLowerCase() : 영문 대문자를 모두 소문자로 변환
+        12. toUpperCase() : 영문 소문자를 모두 대문자로 변환
+        13. concat("새로운 문자") : 문자열에 새로운 문자열을 결합
+        14. charCodeAt(index) : 문자열 인덱스에 해당하는 아스키코드값을 반환
+        15. fromCharCode(아스키코드값) : 아스키코드값에 해당하는 문자를 반환해줌
+        16. trim() : 문자열의 앞, 뒤 공백 삭제
+        
+        */
+
+        let text = "Hello Thank you good luck to you";
+        let text2 = "hihi"; 
+        
+        //charAt(index) 
+        document.write(text.charAt(16),"<br>");
+
+        //indexOf("찾을 문자")
+        document.write(text.indexOf("you"),"<br>");
+
+        //lastIndexOf("찾을 문자") 
+        document.write(text.lastIndexOf("you"),"<br>");
+
+        //match("찾을 문자") 
+        document.write(text.match("luck"),"<br>");
+
+        //replace("바꿀문자","새문자")
+        document.write(text.replace("you","me"),"<br>");
+
+        //search("찾을 문자")
+        document.write(text.search("you"),"<br>");
+
+        //slice(a,b)
+        // document.write(text.search("you"),"<br>");
+
+        //substr(a,문자 개수)
+        document.write(text.substr(21,4),"<br>");
+
+        //substring(a,b)
+        document.write(text.substring(6,12),"<br>");
+
+        // split("문자") 
+        let setText = text.split(" ");
+        console.log(setText);
+
+        // toLowerCase()
+        // toUpperCase()
+        document.write(text.toLowerCase(),"<br>");
+        document.write(text.toUpperCase(),"<br>");
+
+        // concat("새로운 문자")
+        document.write(text.concat(text2),"<br>");
+
+        //charCodeAt(index) 
+        document.write(text.charCodeAt(0),"<br>");
+
+        //fromCharCode(아스키코드값)
+        document.write(String.fromCharCode(72),"<br>");
+
+        //trim()
+        let text3 = "    goldenBell  "
+        console.log(text3);
+        console.log(text3.trim());
+
+        let hello = "안녕하세요~";
+        console.log(hello.slice(0,3));
+        console.log(hello.slice(-4,6));
+
+
+        
+    </script>
+</body>
+</html>
