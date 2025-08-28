@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <script>
+        /*
+        function 함수이름(){
+            기능코드작성
+        };
+        */
+        let count = 0;
+        firstFunction()
+        function firstFunction(){
+            count++;
+            document.write(`안녕하세요 ${count}<br>`);
+        }
+        firstFunction();
+
+        let count2 = 100;
+        let secondFunction = function(){
+            count2--;
+            document.write(`안녕히계세요 ${count2}<br>`);
+        }
+
+        secondFunction();
+    </script>
+</body>
+</html>

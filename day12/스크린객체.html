@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크린객체</title>
+</head>
+<body>
+    <script>
+        /*
+        메서드
+        document.write(); <- document객체의 쓰기기능 메서드
+
+        속성
+        window.innerHeight;
+        
+        1. screen.width : 화면의 너비 반환
+        2. screen.height : 높이 반환
+        3. screen.availWidth : 작업표시줄을 제외한 너비를 반환
+        4. screen.availHeight : 작업표시줄을 제외한 높이를 반환
+        4. screen.colorDepth : 모니터가 표현 가능한 컬러bit를 반환
+        6. window.innerWidth : 브라우저의 현재 너비
+        6. window.innerHeight : 브라우저의 현재 높이
+        */
+
+        document.write(`화면의 너비는 ${screen.width}px 입니다.<br>`);
+        document.write(`화면의 높이는 ${screen.height}px 입니다.<br>`);
+        document.write(`화면의 작업표시줄을 뺀 너비는 ${screen.availWidth}px 입니다.<br>`);
+        document.write(`화면의 작업표시줄을 뺀 높이는 ${screen.availHeight}px 입니다.<br>`);
+        document.write(`화면의 컬러 깊이는 ${screen.colorDepth}bit 입니다.<br>`);
+        document.write(`브라우저의 너비는 ${window.innerWidth}px 입니다.<br>`);
+        document.write(`브라우저의 높이는 ${screen.colorDepth}px 입니다.<br>`);
+
+
+    </script>
+</body>
+</html>

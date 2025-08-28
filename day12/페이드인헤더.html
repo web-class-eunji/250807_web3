@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이드인헤더</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 5000px;
+        }
+
+        header {
+            height: 80px;
+            background-color: crimson;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .lorem {
+            margin-top: 80px;
+        }
+
+        header.hide{
+            transform: translateY(100%);
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div class="lorem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium, dolorem aliquid sequi incidunt
+        culpa officiis debitis facere in ex dolorum cum quos similique quisquam delectus. Dolores mollitia molestiae
+        vero.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium, dolorem aliquid sequi incidunt
+        culpa officiis debitis facere in ex dolorum cum quos similique quisquam delectus. Dolores mollitia molestiae
+        vero.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium, dolorem aliquid sequi incidunt
+        culpa officiis debitis facere in ex dolorum cum quos similique quisquam delectus. Dolores mollitia molestiae
+        vero.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium, dolorem aliquid sequi incidunt
+        culpa officiis debitis facere in ex dolorum cum quos similique quisquam delectus. Dolores mollitia molestiae
+        vero.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium, dolorem aliquid sequi incidunt
+        culpa officiis debitis facere in ex dolorum cum quos similique quisquam delectus. Dolores mollitia molestiae
+        vero.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium, dolorem aliquid sequi incidunt
+        culpa officiis debitis facere in ex dolorum cum quos similique quisquam delectus. Dolores mollitia molestiae
+        vero.
+    </div>
+    <script>
+        /*
+        1. 헤더 요소 가져오기
+        2. let 변수로 스크롤 위치값을 넣어주어야함
+        3. 스크롤 했을 때 스크롤의 위치값이 윈도우의 스크롤값보다 작다면 헤더를 숨기는 함수를 실행
+        4. 반대일 땐 헤더 보여주는 함수 실행할것임
+        5. 스크롤을 내렸다면 새로운 스크롤 값이 들어가야한다. 
+        */
+
+        const header = document.querySelector("header");
+        //const : 상수
+        // console.log(header);
+
+        let posY = 0;
+        window.addEventListener("scroll",(e)=>{
+            if(posY < window.scrollY){
+                headerHeide();
+            }else {
+                headerShow();
+            }
+            posY =  window.scrollY;
+        })
+        // console.log(window.scrollY);
+
+        function headerHeide(){
+            header.classList.add("hide");
+        }
+
+        function headerShow(){
+            header.classList.remove("hide");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>innerHeight로 스크롤 페이드인</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    section {
+      height: 100vh; /* 보기 쉽게 화면 꽉 채우기 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+    }
+
+    .fade {
+      opacity: 0; /* 처음에는 안 보이게 */
+      transform: translateY(40px); /* 아래로 살짝 내려간 상태 */
+      transition: opacity 0.8s ease, transform 0.8s ease; /* 애니메이션 */
+    }
+
+    .fade.show {
+      opacity: 1;         /* 불투명하게 */
+      transform: translateY(0); /* 제자리로 */
+    }
+  </style>
+</head>
+<body>
+  <section style="background:#f1f1f1">스크롤 내려보세요 👇</section>
+  <section>
+    <div class="fade">첫 번째 페이드인 요소</div>
+  </section>
+  <section style="background:#ddd">
+    <div class="fade">두 번째 페이드인 요소</div>
+  </section>
+  <section>
+    <div class="fade">세 번째 페이드인 요소</div>
+  </section>
+
+  <script>
+    // 1) 모든 .fade 요소를 가져온다
+    const fadeEls = document.querySelectorAll('.fade');
+
+    // 2) 스크롤 할 때마다 실행되는 함수
+    function handleScroll() {
+      fadeEls.forEach(el => {
+        // 요소의 위치 정보 가져오기
+        const rect = el.getBoundingClientRect();
+        // window.innerHeight : 현재 브라우저 화면 높이
+        // rect.top : 요소의 상단이 화면 위에서 얼마나 떨어져있는지(px)
+        if (rect.top < window.innerHeight - 100) {
+          // 화면 안쪽에 들어오면 show 클래스 추가
+          el.classList.add('show');
+        } else {
+          // 화면 밖으로 나가면 show 클래스 제거
+          el.classList.remove('show');
+        }
+      });
+    }
+
+    // 3) 페이지 스크롤 이벤트 연결
+    window.addEventListener('scroll', handleScroll);
+    // 4) 페이지 처음 로드될 때도 한 번 실행
+    handleScroll();
+
+  
+  </script>
+</body>
+</html>
