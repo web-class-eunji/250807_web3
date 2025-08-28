@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이메일유효성검사</title>
+</head>
+<body>
+    <script>
+        let userEmail = prompt("이메일을 입력해주세요");
+        let arrUrl = [".co.kr",".com",".net"];
+
+        let check1 = false; // 이메일에 @ 가 들어왔는지 확인하는 변수
+        let check2 = false;
+
+        if(userEmail.indexOf("@")>0){
+            check1 = true;
+        }
+
+        for(let i = 0; i < arrUrl.length;i++){
+            if(userEmail.indexOf(arrUrl[i])>0){
+                check2 = true;
+            }
+            // moeunji_sbs@naver.com
+        }
+
+        //만약 check1과 check2가 True라면 
+        // userEmail은 사용 가능한 아이디 입니다 출력하기
+        // 아니라면 "이메일 형식이 잘못되었음"
+
+        if(check1 && check2){
+            document.write(userEmail + "은 사용 가능한 아이디 입니다.");
+        }else {
+            alert("이메일 형식이 잘못되었습니다.")
+        }
+    </script>
+</body>
+</html>

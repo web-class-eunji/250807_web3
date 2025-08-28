@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시간제어</title>
+</head>
+<body>
+    <button onclick="clearInterval(auto1)">증가 정지</button>
+    <button onclick="clearInterval(auto2)">감소 정지</button>
+    <script>
+        //() => {}
+        // let settimeoutCode = setTimeout(() => {
+        //     document.write("안녕하세요~");
+        // },5000);
+
+        let addNum = 0;
+        let subNum = 100;
+        let auto1 = setInterval(()=>{
+            addNum++;
+            console.log("addNum : ",addNum);
+        },1000);
+
+        let auto2 = setInterval(()=>{
+            subNum--;
+            console.log("subnum : ",subNum);
+        },1000);
+    </script>
+</body>
+</html>
