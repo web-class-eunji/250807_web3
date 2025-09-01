@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...args</title>
+</head>
+<body>
+    <script>
+        // ...args : 함수에 전달될 모든 값을 배열형태로 다룰 수 있음
+
+        function showArgs(...args){
+            // showArgs 라는 함수를 만들었고 ...args를 통해 인자를 전달받겠다~
+            console.log(args); // 전달받은 값들을 배열로 출력하겠다~
+
+        }
+
+        showArgs(1,2,3);
+        showArgs("a","b","c");
+        showArgs();//빈 배열이 생성된다.
+
+        function sum(...args){
+            let total = 0;
+            for(let num of args){
+                // for 변수 of 배열
+                total += num;
+                // 1. args[0]을 num에 넣음
+                // 2. args[1]을 num에 넣음
+            }
+            document.write(`합계 : ${total}`);
+        }
+
+        sum(1,2,3,4,5)
+
+
+
+    </script>
+</body>
+</html>

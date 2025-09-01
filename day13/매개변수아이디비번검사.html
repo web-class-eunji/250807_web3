@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수idpw</title>
+</head>
+<body>
+    <script>
+        /*
+        아이디 변수에 아이디를 미리 지정해놓음
+        pw 변수에 pw를 미리 지정해놓음
+
+        login함수를 생성한 후 매개변수로 id와 pw를 받아와 넣어준다.
+        만약 미리 생성해둔 변수id,pw와 같다면 로그인 되었습니다. 출력
+        id가 다르다면 아이디가 일치하지 않습니다. 출력
+        pw가 다르다면 pw가 가 다릅니다. 출력 
+        user가 입력한 id를 매개변수로 보내줄것임 ( 유저에게 받아올 변수 이름을 매개변수 이름과 통일시켜주면 됨 )
+        */
+
+        let rightId = "moeunji";
+        let rightPw = 1234;
+
+        function login(userId,userPw){
+            if(rightId == userId){
+                if(rightPw == userPw){
+                    document.write("로그인 되었습니다!");
+                } else{
+                    document.write("비밀번호가 일치하지 않습니다.");
+                }
+            } else {
+                document.write("아이디가 일치하지 않습니다.");
+            }
+        }
+
+        let userId = prompt("아이디를 입력해주세요");
+        let userPw = prompt("비밀번호를 입력해주세요");
+
+        login(userId,userPw);
+    </script>
+</body>
+</html>
