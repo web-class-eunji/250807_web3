@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역변수지역변수</title>
+</head>
+<body>
+    <script>
+        // 전역변수란 함수 밖에 선언되는 변수
+        // 모든 기능(함수)에서 사용할 수 있는 변수
+
+        // 지역변수란 특정 함수 안에서만 사용할 수 있는 변수
+        // 함수 밖에서는 접근 불가
+
+        let text = "전역변수";
+        function testFunction(){
+            let text2 = "지역변수";
+            document.write(text + "<br>");
+            console.log(text2);
+        }
+
+        testFunction();
+        document.write(text+"<br>");
+    </script>
+</body>
+</html>

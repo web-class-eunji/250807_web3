@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리턴평균</title>
+</head>
+<body>
+    <script>
+        //사용자에게 과목에 대한 점수를 받은 후 평균을 내는 코드
+        /*
+        평균을 내는 함수를 만드는데 매개변수가 있을것이다.
+        함수안에 기능은
+        점수들의 합을 담을 변수를 선언한 다음 값을 0 으로 넣어놓는다.
+
+        반복문을 돌리는데 매개변수로 받은 값의 개수만큼 반복할것
+        반복문을 돌리면서 prompt를 활용하여 사용자가 각 과목의 점수를 입력하게 한다.
+        입력한 값은 0이었던 sum에 더해지게 만든다.
+        반복이 끝나면 평균이라는 변수를 선언한 후 sum을 과목의 개수로 나눈 값을 대입한다.
+        return을 사용하여 평균을 리턴한다. ( 함수 작성 완료됨 )
+
+        과목이 들어있는 배열을 하나 만든다.
+        함수를 호출할 때 매개변수에 배열을 넣어줄것이다.
+
+        */
+
+        function subjectAvg(arrData){
+            let sum = 0;
+            for(let i = 0; i < arrData.length; i++){
+                sum += Number(prompt(`${arrData[i]}의 점수는?`));
+            }
+            let avg = Math.round(sum / arrData.length);
+            return avg;
+        }
+
+        let arrsubject = ["국어","수학","영어"];
+        let result = subjectAvg(arrsubject);
+
+        document.write(`평균 점수는 ${result}입니다.`);
+    </script>
+</body>
+</html>
