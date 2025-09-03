@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위치관련메서드</title>
+</head>
+<body>
+    <!-- innerHeight와 innerwidth -->
+    <button onclick="showWindowSize()">브라우저 크기 보기</button>
+    <p id="size">
+
+    </p>
+
+    <hr>
+
+    <!-- innerHTML -->
+    <div id="content">
+        <p>이 내용이 바뀔거에요!</p>
+    </div>
+    <button onclick="changeContent()">내용 바꾸기</button>
+
+
+
+
+    <script>
+        function showWindowSize(){
+            const height = window.innerHeight;
+            //브라우저 창의 내부 높이(뷰포트 높이)를 픽셀로 반환해줌
+            const width = window.innerWidth;
+            document.getElementById("size").textContent = `높이 : ${height}px / 너비 : ${width}px`;
+        }
+
+        // const height = window.innerHeight;
+        // console.log(height);
+
+        //innerHTML : 요소의 내부 내용을 가져오거나 수정
+        function changeContent(){
+            const div = document.getElementById("content");
+            div.innerHTML = "<h1>새로운 내용</h1><p>이제 변경되었습니다!</p>";
+        }
+    </script>
+</body>
+</html>

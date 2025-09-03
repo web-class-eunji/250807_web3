@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재귀함수</title>
+</head>
+<body>
+    <script>
+        /*
+        function 재귀함수(매개변수){
+            if(탈출조건){
+                return 결과; // 재귀를 멈추기 위함
+            }
+            재귀함수 호출(다음 호출의 매개변수)
+        }
+
+        */
+
+        let num = 0;
+        function testFuntion(){
+            num++;
+            document.write(num,"<br>");
+            if(num == 10){
+                return;
+            }else{
+                testFuntion(); // 재귀
+            }
+        }
+
+        testFuntion();
+    </script>
+</body>
+</html>
