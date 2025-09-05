@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더색변경</title>
+    <style>
+        body {
+            height: 5000px;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            background-color: cadetblue;
+            color: #fff;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .header > ul {
+            display: flex;
+            list-style: none;
+        }
+
+        li {
+            margin: 0 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .login_btn > button {
+            background: #fff;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        h1 {
+            margin: 0 32px;
+        }
+
+        .header_active {
+            background-color: aquamarine;
+        }
+
+        .scroll_color_change {
+            color: cadetblue;
+        }
+
+        button.header_button_active {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="header">
+        <h1 class="color_change">LOGO</h1>
+        <ul id="menu">
+            <li class="color_change">메뉴1</li>
+            <li class="color_change">메뉴2</li>
+            <li class="color_change">메뉴3</li>
+            <li class="color_change">메뉴4</li>
+        </ul>
+        <div class="login_btn">
+            <button>로그인</button>
+            <button>회원가입</button>
+        </div>
+    </header>
+    <script>
+        // getBoundingClientRect를 통해 header의 높이를 구함
+        //  window.scrollY; 를 통해 현재 얼마나 스크롤 되었는지 확인
+
+        // 스크롤 된 높이가 header의 높이보다 크다면 
+        // .classList.add(); 를 통해 클래스를 붙인다.
+
+        // 스크롤 된 높이가 header의 높이보다 크지 않다면 클래스를 떼어준다. 
+        const header = document.getElementById("header");
+        let headerHeight = header.getBoundingClientRect().height;
+        const headerColorChange = document.querySelectorAll(".color_change");
+        console.log(headerColorChange);
+
+        const buttons = document.querySelectorAll(".login_btn button");
+        console.log(buttons);
+
+        window.addEventListener("scroll",()=>{
+            let scrollHeight = window.scrollY;
+            // 얼만큼 스크롤 했는지
+            console.log(scrollHeight);
+
+            if(scrollHeight > headerHeight){
+                header.classList.add("header_active");
+                headerColorChange.forEach((element)=>{
+                    element.classList.add("scroll_color_change");
+                })
+                buttons.forEach((btn)=>{
+                    btn.classList.add("header_button_active");
+                })
+            }else{
+                header.classList.remove("header_active");
+                headerColorChange.forEach((element)=>{
+                    element.classList.remove("scroll_color_change");
+                })
+                buttons.forEach((btn)=>{
+                    btn.classList.remove("header_button_active");
+                })
+            }
+        })
+
+    </script>
+</body>
+</html>

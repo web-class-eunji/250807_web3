@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>위치관련메서드</title>
+    <style>
+        #name {
+            display: block;
+        }
+
+        #box {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 5px solid #000;
+
+        }
+
+        #target {
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+        }
+    </style>
 </head>
 <body>
     <!-- innerHeight와 innerwidth -->
@@ -20,8 +39,28 @@
     </div>
     <button onclick="changeContent()">내용 바꾸기</button>
 
+    <!-- textContent -->
+    <div id="text_example">
+        <p>저는 <b>고양이</b>를 좋아해요.</p>
+    </div>
+    <button onclick="showText()">텍스트 보기</button>
 
+    <!-- value -->
+    <input type="text" id="name" value="기본값">
+    <button onclick="updateValue()">값 변경하기</button>
 
+    <!-- offsetHeight,clientHeight,scrollHeight -->
+    <div id="box">
+        위치와 크기를 확인할 박스
+    </div>
+    <button onclick="showHeights()">박스 높이 정보 보기</button>
+    <button onclick="showWidths()">박스 너비 정보 보기</button>
+
+    <!-- getBoundingClientRect -->
+    <div id="target">
+        위치와 크기를 확인할 박스
+    </div>
+    <button onclick="showRect()">박스 정보 보기</button>
 
     <script>
         function showWindowSize(){
@@ -38,6 +77,47 @@
         function changeContent(){
             const div = document.getElementById("content");
             div.innerHTML = "<h1>새로운 내용</h1><p>이제 변경되었습니다!</p>";
+        }
+
+        function showText(){
+            const div = document.getElementById("text_example");
+            alert(div.textContent);
+        }
+
+        function updateValue(){
+            const input = document.getElementById("name");
+            alert(`현재값 : ${input.value}`);
+            input.value = "새로운 값"
+        }
+
+        function showHeights(){
+            const box = document.getElementById("box");
+            alert(`
+            offsetHeight : ${box.offsetHeight}px \n
+            clientHeight : ${box.clientHeight}px \n
+            scrollHeight ${box.scrollHeight}px`
+        );
+        // offsetHeight : 요소의 전체 높이(패딩, 보더 포함)
+        // clientHeight : 요소의 패딩 포함 높이 ( 보더는 제외 )
+        // scrollHeight : 요소의 스크롤 가능한 전체 높이
+        }
+
+        function showWidths(){
+            const box = document.getElementById("box");
+            alert(`
+            offsetWidth : ${box.offsetWidth}px \n
+            clientWidth : ${box.clientWidth}px \n
+            scrollWidth ${box.scrollWidth}px`
+        );
+        }
+
+        function showRect(){
+            const box = document.getElementById("target");
+            const rect = box.getBoundingClientRect();
+            alert(`
+            위치 : (x : ${rect.x}, y : ${rect.y}) \n
+            크기 : (width : ${rect.width}, height : ${rect.height})
+            `);
         }
     </script>
 </body>
