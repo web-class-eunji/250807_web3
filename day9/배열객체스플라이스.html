@@ -14,68 +14,58 @@
         slice(시작구간(포함),끝구간(포함안함)):원하는  구간만큼 잘라서 배열객체로 가져온다.
         splice(삭제시작,삭제개수,새로운데이터) : 지정 데이터를 삭제하고 그 구간에 새로운 데이터를 삽입
         concat() : 2개의 배열을 하나로 결합
-        pop() : 배열에 저장된 데이터 중 마지막 인덱스에 저장된 데이터 삭제
-        push(new data) : 마지막 인덱스에 새 데이터 삽입
-        shift() : 첫번째 인덱스에 저장된 데이터 삭제
-        unshift(new data) : 가장 앞에 새 데이터를 삽입
+        pop() : 배열에 저장된 데이터 중 마지막 인덱스에 저장된 데이터 삭제후 반환
+        push(new data) : 마지막 인덱스에 새 데이터 삽입(배열의 새로운 길이를 반환)
+        shift() : 첫번째 인덱스에 저장된 데이터 삭제 후 삭제된 데이터 반환
+        unshift(new data) : 가장 앞에 새 데이터를 삽입 (배열의 새로운 길이를 반환)
         length(메서드 아니고 속성!) : 배열에 저장되니 총 데이터 개수를 반환
         */
 
         let array1 = ["사당","교대","방배","강남"];
         let array2 = ["신사","압구정","옥수"];
 
-        //join
-        // join(연결문자) : 배열객체의 데이터를 연결문자 기준으로 1개의 문자형 데이터로 반환
-        let result = array1.join("*");
+        // join
+        let result = array1.join("-");
         document.write(result + "<br>");
 
-        // reverse
-        // reverse() : 배열객체의 데이터 순서를 역순으로 바꾼 후 반환
+        //reverse
         result = array1.reverse();
         document.write(result + "<br>");
 
         //sort
-        // sort() : 오름차순
         result = array1.sort();
         document.write(result + "<br>");
 
         //slice
-        // slice(시작구간(포함),끝구간(포함안함)):원하는  구간만큼 잘라서 배열객체로 가져온다.
         result = array1.slice(1,3);
         document.write(result + "<br>");
-        document.write(array1 + "dfd <br>")
 
-        //splice
-        // splice(삭제시작,삭제개수,새로운데이터) : 지정 데이터를 삭제하고 그 구간에 새로운 데이터를 삽입
+        // splice
         result = array1.splice(1,2,"홍대");
-        document.write(result + "<br>");
+        document.write(result + " 입니다.<br>");
         document.write(array1 + "<br>");
 
-        //concat
         result = array1.concat(array2);
         document.write(result + "<br>");
 
-        //pop
+        console.log(array1);
+        console.log(array2);
+
         result = array1.pop();
         document.write(result + "<br>");
-        document.write(array1 + "<br>");
 
-        //push
         result = array1.push("용산");
         document.write(result + "<br>");
-        document.write(array1 + "<br>");
+        console.log(array1);
 
-        //shift
         result = array1.shift();
         document.write(result + "<br>");
-        document.write(array1 + "<br>");
 
-        //unshift
         result = array1.unshift("잠실");
         document.write(result + "<br>");
-        document.write(array1 + "<br>");
+        console.log(array1);
 
-        document.write(array2.length);
+        console.log(array2.length);
     </script>
 </body>
 </html>
