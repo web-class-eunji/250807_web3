@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return평균</title>
+</head>
+<body>
+    <script>
+        function subjectAvg(subData){
+            let sum = 0;
+            for(let i = 0; i < subData.length;i++){
+                sum += Number(prompt(`${subData[i]}의 점수는?`));
+            }
+            console.log(sum);
+            let avg = Math.round(sum/subData.length);
+            return avg;
+        }
+
+        let arrsubject = ["영어","수학","국어"];
+        let result = subjectAvg(arrsubject);
+        document.write("평균점수는" + result);
+
+    </script>
+</body>
+</html>
